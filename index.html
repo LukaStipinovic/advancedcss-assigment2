@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS - Assignment 2</title>
+
+    <style>
+        #container {
+            width: 600px;
+            height: 500px;
+            margin: 0 auto;
+            background: #050210;
+        }
+
+        #gradient,
+        #gradientblur {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            margin: 125px 175px;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 100%;
+            animation: circle-rotation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        #gradientblur {
+            filter: blur(30px);
+        }
+
+        #innercircle {
+            position: absolute;
+            width: 215px;
+            height: 215px;
+            margin: 142.5px 192.5px;
+            background: #050210;
+            border-radius: 100%;
+        }
+
+
+        #innercircle2 {
+            position: absolute;
+            size: 50px;
+            height: 200px;
+            width: 200px;
+            margin: 150px 200px;
+            background-color: white;
+            border-radius: 100%;
+            transform: scale(50%);
+            animation-name: inner-circle;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes circle-rotation {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes inner-circle {
+            0% {
+                transform: scale(0%);
+                filter: opacity(0%);
+            }
+
+            30% {
+                filter: opacity(10%);
+            }
+
+            70% {
+                filter: opacity(10%);
+            }
+
+            100% {
+                transform: scale(100%);
+                filter: opacity(0%);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="gradient">
+        </div>
+        <div id="gradientblur">
+        </div>
+        <div id="innercircle">
+        </div>
+        <div id="innercircle2">
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
